@@ -1,13 +1,16 @@
 import java.util.Scanner;
 
-/**
- * Created by x17212 on 3/14/2017.
- */
 public class MyFirstProgram {
     public static void main(String args[]){
-//        swappingNumber();
-//        decrementNumber();
+        swappingNumber();
+        decrementNumber();
         allElementsArray();
+
+        int sumOfNo = returnSumValue(65834);
+        System.out.println("Sum of individual digits: " + sumOfNo);
+
+
+        checkPrimeNo();
     }
 
     private static void swappingNumber(){
@@ -56,5 +59,30 @@ public class MyFirstProgram {
         System.out.println("Max of Array: "+max);
     }
 
+    private static int returnSumValue(int var){
+        int sum = 0;
+        while(var > 0){
+            sum += var % 10;
+            var = var / 10;
+        }
+        return sum;
+    }
+
+    private static void checkPrimeNo(){
+        int k = 2;
+        System.out.print("Prime Nos are: ");
+        for(int i=1; i < 100; i++){
+            int total = 0;
+            for(int j=1; j <= k ; j++){
+                if(k%j == 0){
+                    total++;
+                }
+            }
+            if(total == 2){
+                System.out.print(" " + k);
+            }
+            k++;
+        }
+    }
 
 }

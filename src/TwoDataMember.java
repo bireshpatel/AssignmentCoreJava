@@ -1,7 +1,25 @@
-package PACKAGE_NAME;
+class TwoDataMember {
+    private int param1;
+    private int param2;
 
-/**
- * Created by x17212 on 3/16/2017.
- */
-public class TwoDataMember {
+    TwoDataMember(int var1, int var2) {
+        param1 = var1;
+        param2 = var2;
+    }
+
+    int add(){
+        return param2 + param1;
+    }
+
+    int sub(){
+        return param1 - param2;
+    }
+
+    int div(){
+        return param1/param2;
+    }
+
+    int multi(){
+        return param1*param2;
+    }
 }

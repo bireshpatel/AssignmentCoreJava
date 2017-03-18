@@ -1,7 +1,35 @@
-package PACKAGE_NAME;
+class Circle
+{
+    float radius;
 
-/**
- * Created by x17212 on 3/17/2017.
- */
-public class Circle {
+    //final is used to declare constants
+
+    final float PI = 3.14f;
+    //a final member may or may not be static
+
+    public Circle()
+    {
+        radius = 50;
+    }
+
+    public Circle(float r)
+    {
+        radius = r;
+    }
+
+    public void displayArea()
+    {
+        float result = PI*radius*radius;
+
+        System.out.println("Area is:"+result);
+    }
+
+    public void displayCircum()
+    {
+        float ccf = 2*PI*radius;
+
+        System.out.println("Circumference is:"+ccf);
+    }
+
 }
+
